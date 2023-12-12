@@ -63,6 +63,7 @@ function App(): React.JSX.Element {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <NavigationContainer>
+            {/* 하단 탭 */}
             {isLoggedIn ? (
               <Tab.Navigator>
                 <Tab.Screen
