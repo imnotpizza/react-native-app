@@ -20,6 +20,7 @@ import {
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
+import Config from 'react-native-config';
 
 export type LoggedInParamList = {
   Orders: undefined;
@@ -43,6 +44,8 @@ type SectionProps = PropsWithChildren<{
 function App(): React.JSX.Element {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const isDarkMode = useColorScheme() === 'dark';
+
+  console.log('22222', Config.API_URL);
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
